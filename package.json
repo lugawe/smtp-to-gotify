@@ -1,9 +1,6 @@
 {
   "private": true,
-  "engines": {
-    "node": ">=18.14.0"
-  },
   "dependencies": {
-    "maildev": "^2.0.5"
+    "maildev": "^2.1.0"
   }
 }

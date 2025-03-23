@@ -22,6 +22,7 @@ const maildev = new MailDev({
 const gotify = new Gotify(GOTIFY_URL, GOTIFY_TOKEN)
 
 maildev.on("new", async (email) => {
+    console.log("new email")
     try {
         await gotify.send(email.subject, email.text)
     } catch (e) {

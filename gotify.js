@@ -13,6 +13,9 @@ export default class {
             message: message || "No message provided",
             priority
         }
-        return await axios.post(this.messageUrl, body)
+        const result = await axios.post(this.messageUrl, body)
+        if (result.status > 299 || result.status < 200) {
+            throw new Error("failed to push gotify message", result.data)
+        }
     }
 }

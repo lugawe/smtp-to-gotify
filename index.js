@@ -26,7 +26,7 @@ maildev.on("new", async (email) => {
     try {
         await gotify.send(email.subject, email.text)
     } catch (e) {
-        console.error("failed to forward email", e.message)
+        console.error("failed to forward email")
     }
 })
 
